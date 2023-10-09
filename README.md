@@ -158,6 +158,13 @@ def add(n1, n2):
 result = add(2, 3)
 ````
 ### Variable Scope
+Variables created inside a function are destroyed once the function has executed.
+<br>
+The location (line of code) that you use a variable will determine its value.
+<br>
+Here n is 2 but inside my_function() n is 3.
+<br>
+So printing n inside and outside the function will determine its value.
 ````python
 n = 2
 def my_function():
