@@ -122,3 +122,47 @@ It can be really helpful in certain situations, e.g. figuring out if a number is
 5 % 2
 # result is 1
 ````
+## Functions
+### Creating functions
+This is the basics syntax for a function in Python.It allows you to give a set of instructions a name, so you can trigger it multiple times without having to re-write or copy-paste it. The contents of the function must be indented to signal that it's inside.
+````python
+def my_function():
+    print("Hello")
+    name = input("Your name:")
+    print(f"Hello {name}")
+````
+### Calling Functions
+You activate the function by calling it.
+<br>
+This is simply done by a set of round brackets.This allows you to determine when to trigger the function and how many times.
+````python
+my_function()
+my_function()
+# The function my_function
+# will run twice.
+````
+### Functions with Inputs
+In addition to simple functions, you can give the function an input, this way, each time the function can do something different depending on the input. It makes your function more useful and re-usable.
+````python
+def add(n1, n2):
+    print(n1 + n2)
+add(2, 3)
+````
+### Functions with Outputs
+In addition to inputs, a function can also have an output. The output value is proceeded bye the keyword "return".
+<br>
+This allows you to store the result from a function.
+````python
+def add(n1, n2):
+    return n1 + n2
+result = add(2, 3)
+````
+### Variable Scope
+````python
+n = 2
+def my_function():
+    n = 3
+    print(n)
+print(n) # Prints 2
+my_function() #Prints 3
+````
