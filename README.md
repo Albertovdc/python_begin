@@ -173,3 +173,46 @@ def my_function():
 print(n) # Prints 2
 my_function() #Prints 3
 ````
+### Keyword Arguments
+When calling a function, you can provide a keyword argument or simply just the value.
+<br>
+Using a keyword argument menas that you don't have to follow any order when providing the inputs.
+````python
+def divide(n1, n2):
+    result = n1 / n2
+# Option 1:
+divide(10, 5)
+# Option 2:
+divide(n2=5, n1=10)
+````
+## Conditionals
+### If
+This is the basic syntax to test if a condition is true. If so, the indented code will be executed, if not it will be skipped.
+````python
+n = 5
+if n > 2:
+    print("Large than 2")
+````
+### Else
+This is a way to specify some code that will be executed if a condition is false.
+````python
+age = 18
+if age > 16:
+    print("Can drive")
+else:
+    print("Don't drive")
+````
+### Elif
+In addition to the initial If statement condition, you can add extra conditions to test if the first condition is false.
+<br>
+Once an elif condition is true, the rest of the elif conditions are no longer checked and are skipped.
+````python
+weather = "sunny"
+if weather == "rain":
+    print("bring umbrella")
+elif weather == "sunny":
+    print("bring sunglasses")
+elif weather == "snow":
+    print("bring gloves")
+````
+
