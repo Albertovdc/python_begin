@@ -222,5 +222,73 @@ s = 58
 if s < 60 and s > 50:
   print("Your grade is C")
 ````
+### Or
+This expects either of the conditions either side of the or to be true. Basically, both conditions cannot be false.
+````python
+age = 12
+if age < 16 or age > 200:
+  print("Can't drive")
+````
+### Not
+This will flip the original result of the condition. e.g. if it was true then it's now false.
+````python
+if not 3 > 1:
+  print("something")
+  # Will not be printed.
+````
+### Comparison operators
+These mathematical comparison operators allows you to refine your conditional checks.
+
+| Symbol |                          |
+|--------|--------------------------|
+| \>     | Greater than             |
+| <      | Lesser than              |
+| \>=    | Greater than or equal to |
+| <=     | Lesser than or equal to  |
+| ==     | Is equal to              |
+| !=     | Is not equal to          |
+
+## Loops
+### While Loop
+This is a loop that will keep repeating itself until the while condition becomes false.
+````python
+n = 1
+while n < 100:
+  n += 1
+````
+### For Loop
+For loops give you more control than while loops. You can loop through anything that is iterable. e.g. a range, a list, a dictionary or tuple.
+````python
+all_fruits =["apple", "orange", "banana"]
+for fruits in all_fruits:
+  print(fruits)
+````
+### _ in a Foor Loop
+If the value your for loop is iterating through. e.g. the number in the range, or the item in the list is not needed, you can replace it with an underscore.
+````python
+for _ in range(100):
+  # Do something 100 times.
+````
+### break
+The keyword allows to you break free of the loop.You can use it in a for or while loop.
+````python
+scores = [34, 70, 89, 109]
+for s in scores:
+  if s > 100:
+    print("Invalid")
+    break
+  print(s)
+````
+### continue
+The keyword allows you to skip this iteration of the loop and go to the next. The loop will still continue, but it will start from the top.
+````python
+n = 0
+while n < 100:
+  n += 1
+  if n % 2 == 0:
+    continue
+  print(n)
+# Prints all the odd numbers.
+````
 
 
