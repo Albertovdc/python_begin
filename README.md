@@ -290,5 +290,184 @@ while n < 100:
   print(n)
 # Prints all the odd numbers.
 ````
+### Infinite Loops
+Sometimes, the condition you are checking to see if the loop should continue never becomes false. In this case, the loop will continue for eternity (or until your computer stops it). This is more common with while loops.
+````python
+while 5 > 1:
+  print("I'm a survivor")
+````
+## List methods
+### Adding list together
+You can extend a list with another list by using the extend keyword, or the + symbol.
+````python
+list1 = [1, 2, 3]
+list2 = [9, 8, 7]
+new_list = list1 + list2
+list1 += list2
+````
+### Adding an Item to a List
+If you just want to add a single item to a list, you need to use the .append() method.
+````python
+all_fruits = ["apple", "orange", "banana"]
+
+all_fruits.append("pear")
+````
+### List index
+Using the list index and the colon symbol you can slice up a list to get only the portion you want.
+<br>
+Start is include, but end is not.
+````python
+# list[start:end]
+letters = ["a", "b", "c", "d"]
+letters[1:3]
+# result : ["b", "c"]
+````
+## Build in functions
+### Range
+Often you will want to generate a range of numbers.You can specify the start, end and step.
+<br>
+Start is included, but end is exclude:
+start <= range < end
+````python
+# range(start, end, step)
+for i in range(6, 0, -2):
+  print(i)
+# result: 6, 4, 2
+# 0 is not include
+````
+### Randomisation
+The random function come from the random module which needs to be imported.
+<br>
+In this case, the start and end are both included.
+<br>
+start <= randint <= end
+````python
+import random
+# randint(start, end)
+n = random.randint(2, 5)
+#n can be 2, 3, 4 or 5.
+````
+### Round
+This does a mathematical round.
+<br>
+So 3.1 becomes 3, 4.5 becomes 5
+<br>
+and 5.8 becomes 6.
+````python
+round(4.6)
+# result 5
+````
+### abs
+This returns the absolute value.
+<br>
+Basically removing any -ve signs.
+````python
+abs(-4.6)
+# result 4.6
+````
+## Modules
+### Importing 
+Some modules are pre-installed with python e.g. random/datetime
+<br>
+Other modules need to be installed from pypi.org
+````python
+import random
+n = random.randint(3, 10)
+````
+### Aliasing
+You can use the as keyword to give your module a different name.
+````python
+import random as r
+n = r.randint(1, 5)
+````
+### Importing from modules
+You can import a specific thing from a module. e.g. a function/class/constant.
+<br>
+You do this with the from keyword. It can save you from having to type the same thing many times.
+````python
+from random import randint
+n = randint(1, 5)
+````
+### Importing Everything
+You can use the wildcar(*) to import everything from a module . Beware,this usually reduces code readability.
+````python
+from random import *
+list = [1, 2, 3]
+choice(list)
+# More readable/ understood
+# random.choice(list)
+````
+## Classes & Objects
+### Creating a Python Class
+You create a class using the class keyword.
+<br>
+Note, class names in Python are PascalCase.
+<br>
+So to create an empty class.
+````python
+class MyClass:
+  # define class
+````
+### Creating an Object from a Class
+You can create a new instance of an object by using the class name +().
+````python
+class Car:
+  pass
+
+my_toyota = Car()
+````
+### Class Methods
+You can create a function that belongs to a class, this is known as a method.
+````python
+class Car:
+  def drive(self):
+    print("Move")
+
+my_honda = Car()
+my_honda.drive()
+````
+### Class Variables
+You can create a variable in a class.
+The value of the variable will be available.
+to all objects created from the class.
+````python
+class Car:
+  colour = "black"
+car1 = Car()
+print(car1.colour) # black
+````
+### The \_\_init__ method
+The init method is called every time a new object is created from the class.
+````python
+class Car:
+  def __init__(self):
+    print("Building car")
+my_toyota = Car()
+# You will see "building car"
+# printed
+````
+### Class Properties
+You can create a variable in the init() of a class so that all objects created from the class has access to that variable.
+````python
+class Car:
+  def __init__(self, name):
+    self.name = "Jimmy"
+````
+### Class Inheritance
+Whe you create a new class, you can inherit the methods and properties of another class.
+````python
+class Animal:
+  def breathe(self):
+    print("breathing")
+class Fish(Animal):
+  def breathe(self):
+    super().breathe()
+    print("underwater")
+nemo = Fish()
+nemo.breathe()
+# Result:
+# breathing
+# underwater
+````
 
 
