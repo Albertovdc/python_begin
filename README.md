@@ -469,5 +469,11 @@ nemo.breathe()
 # breathing
 # underwater
 ````
+<br>
+
+### List comprehension
+````python
+new_list = [new_item for item in list]
+````
 
 
