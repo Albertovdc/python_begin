@@ -475,5 +475,9 @@ nemo.breathe()
 ````python
 new_list = [new_item for item in list]
 ````
+### List comprehension conditional
+````python
+new_list = [new_item for item in list if test]
+````
 
 
